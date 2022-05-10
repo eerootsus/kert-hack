@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virus.exe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <a id="cancel_button">CANCEL VIRUS DOWNLOAD</a>
+        <video id="antivirus">
+            <source src="antivirus.mp4" type="video/mp4">
+            Sorry, your antivirus is out of date.
+        </video>
+        <script>
+            (function(){
+                const button = document.getElementById('cancel_button');
+                const antivirus = document.getElementById('antivirus');
+                button.addEventListener('click', function(){
+                    if (!document.fullscreenElement) {
+                        document.documentElement.requestFullscreen();
+                    }
+                    document.body.classList.add('antivirus');
+                    antivirus.play();
+                });
+            })();
+        </script>
+    </body>
+</html>
